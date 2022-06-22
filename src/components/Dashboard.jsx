@@ -13,9 +13,14 @@ import { DashboardInner, DashboardWrapper } from '../styles/Dashboard.style';
 import Card from './Card';
 import Modal from './Modal';
 
+import Confetti from 'react-confetti';
+import { useWindowSize } from 'react-use';
 const animalsArr = [cat, dog, cow, dinosaur, elephant, penguin, lion, koala];
 
 const Dashboard = ({ setTurn, setTotalTime, turn, totalTime }) => {
+    //window resize
+    const { width, height } = useWindowSize();
+
     //states
     const [animals, setAnimals] = useState(null);
     const [firstCard, setfirstCard] = useState(null);
@@ -97,7 +102,7 @@ const Dashboard = ({ setTurn, setTotalTime, turn, totalTime }) => {
                 setAnimals((prevAnimals) =>
                     prevAnimals.map((animal) => ({
                         ...animal,
-                        singleDisable: false,
+                        singleDisable: animal.match ? true : false,
                     }))
                 );
                 setTimeout(() => resetAction(), 600);
@@ -141,13 +146,25 @@ const Dashboard = ({ setTurn, setTotalTime, turn, totalTime }) => {
                     />
                 ))}
             </DashboardInner>
+
             {isAllMatch && (
-                <Modal
-                    turn={turn}
-                    totalTime={totalTime}
-                    setIsAllMatch={setIsAllMatch}
-                    resetToDefault={resetToDefault}
-                />
+                <>
+                    <Confetti
+                        width={width}
+                        height={height / 2 - 30}
+                        style={{
+                            background: 'transparent',
+                            position: 'fixed',
+                            zIndex: '100',
+                        }}
+                    />
+                    <Modal
+                        turn={turn}
+                        totalTime={totalTime}
+                        setIsAllMatch={setIsAllMatch}
+                        resetToDefault={resetToDefault}
+                    />
+                </>
             )}
         </DashboardWrapper>
     );

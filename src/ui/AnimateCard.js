@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const AnimateCard = styled.div`
@@ -23,7 +22,7 @@ const AnimateCard = styled.div`
             rgba(76, 175, 80, 1) 18%,
             rgba(49, 220, 255, 1) 100%
         );
-        animation: rotateBorder 3s linear infinite;
+        animation: rotateBorder 5s linear infinite;
     }
 
     &::after {
