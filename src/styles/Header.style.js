@@ -3,7 +3,7 @@ import { cloud } from '../assets';
 
 export const Header = styled.header`
     text-align: center;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 2rem 0;
 `;
 
 export const Logo = styled.h2`
@@ -16,6 +16,10 @@ export const Logo = styled.h2`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 480px) {
+        font-size: 3rem;
+    }
 `;
 
 export const Title = styled.h5`
@@ -25,8 +29,12 @@ export const Title = styled.h5`
     background-image: linear-gradient(
         90deg,
         rgba(122, 205, 250, 1) 0%,
-        rgba(25, 210, 106, 1) 70%
+        rgba(25, 210, 106, 1) 80%
     );
     -webkit-background-clip: text;
     color: transparent;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.8rem;
+    }
 `;

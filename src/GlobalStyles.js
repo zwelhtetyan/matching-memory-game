@@ -6,9 +6,10 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Raleway', sans-serif;
-        background-color: #292824;
         color: #fff;
         font-family: 'Alegreya Sans', sans-serif;
+        
+        background: #040c18;
     }
     
     
