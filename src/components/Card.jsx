@@ -1,15 +1,20 @@
 import React from 'react';
-import { Back, CardWrapper, Front, InnerCard } from '../styles/Card.style';
+import {
+    Back,
+    Card as CardWrapper,
+    Front,
+    InnerCard,
+} from '../styles/Card.style';
 
 const Card = ({ animal, handleTurn, flipped, disable }) => {
     return (
-        <CardWrapper flipped={flipped}>
-            <InnerCard
-                onClick={() => !disable && handleTurn(animal)}
-                disabled={animal.singleDisable}
-            >
-                <Front src={animal.src} />
-                <Back as='div' />
+        <CardWrapper
+            onClick={() => !disable && handleTurn(animal)}
+            disabled={animal.singleDisable}
+        >
+            <InnerCard>
+                <Front src={animal.src} alt='animal_photo' flipped={flipped} />
+                <Back flipped={flipped} />
             </InnerCard>
         </CardWrapper>
     );

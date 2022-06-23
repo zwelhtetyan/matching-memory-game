@@ -4,9 +4,9 @@ export const DashboardWrapper = styled.div`
     height: calc(100vh - 203px);
 
     overflow: hidden;
-    padding: 1rem;
+    padding: 2.5rem 1rem 1rem 1rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 `;
 
