@@ -1,4 +1,4 @@
-## Matching Memory Game
+## Matching Memory Game 🧠
 
 ### It's just a simple one 👻
 
