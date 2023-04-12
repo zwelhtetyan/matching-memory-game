@@ -6,11 +6,11 @@
 
 ### Features
 
--  timer
--  move
--  rating (🌟🌟🌟)
+- [x] timer
+- [x] move
+- [x] rating (🌟🌟🌟)
 
 ### Tech Stack
 
-- react
-- styled-component 💅
+- [x] react
+- [x] styled-component 💅
